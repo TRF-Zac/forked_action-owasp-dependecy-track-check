@@ -41,15 +41,15 @@ case $LANGUAGE in
         BoMResult=$(cyclonedx-py -o bom.xml)
         ;;
     
-    "golang")
-        echo "[*]  Processing Golang BoM"
-        if [ ! $? = 0 ]; then
-            echo "[-] Error executing go build. Stopping the action!"
-            exit 1
-        fi
-        path="bom.xml"
-        BoMResult=$(cyclonedx-go -o bom.xml)
-        ;;
+    # "golang")
+    #     echo "[*]  Processing Golang BoM"
+    #     if [ ! $? = 0 ]; then
+    #         echo "[-] Error executing go build. Stopping the action!"
+    #         exit 1
+    #     fi
+    #     path="bom.xml"
+    #     BoMResult=$(cyclonedx-go -o bom.xml)
+    #     ;;
 
     "ruby")
         echo "[*]  Processing Ruby BoM"
